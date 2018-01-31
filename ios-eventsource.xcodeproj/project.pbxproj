@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B27290DC465EE2AD3FE9E40 /* libPods-ios-eventsource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 257C65E3148EDC25892AB5CD /* libPods-ios-eventsource.a */; };
+		691C82EB201E57C000503C03 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C82EA201E57C000503C03 /* ChatViewController.swift */; };
+		691C82ED201E589C00503C03 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C82EC201E589C00503C03 /* Router.swift */; };
+		691C82EF201F3E6A00503C03 /* EventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C82EE201F3E6A00503C03 /* EventSource.swift */; };
+		691C82F7201F426D00503C03 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C82F5201F426D00503C03 /* Constants.swift */; };
+		691C82F8201F426D00503C03 /* UtilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C82F6201F426D00503C03 /* UtilityManager.swift */; };
 		69E1F2DD201E524300A4C6EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1F2DC201E524300A4C6EA /* AppDelegate.swift */; };
 		69E1F2E2201E524300A4C6EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E1F2E0201E524300A4C6EA /* Main.storyboard */; };
 		69E1F2E4201E524300A4C6EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E1F2E3201E524300A4C6EA /* Assets.xcassets */; };
@@ -42,7 +48,6 @@
 		69E1F347201E53D700A4C6EA /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1F32B201E53D700A4C6EA /* UnwindSegue.swift */; };
 		69E1F348201E53D700A4C6EA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1F32C201E53D700A4C6EA /* LoadingView.swift */; };
 		69E1F349201E53D700A4C6EA /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1F32D201E53D700A4C6EA /* AsyncImageView.swift */; };
-		9F8949D5E923663F35BFB058 /* Pods_ios_eventsource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9B3EBEAA4A700A70025239 /* Pods_ios_eventsource.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +69,14 @@
 
 /* Begin PBXFileReference section */
 		1E4E9AFB71678E1907A6A276 /* Pods-ios-eventsource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-eventsource.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-eventsource/Pods-ios-eventsource.debug.xcconfig"; sourceTree = "<group>"; };
+		257C65E3148EDC25892AB5CD /* libPods-ios-eventsource.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-eventsource.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F5862795D5BE9C03B497FE /* Pods-ios-eventsource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-eventsource.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-eventsource/Pods-ios-eventsource.release.xcconfig"; sourceTree = "<group>"; };
+		691C82E9201E577000503C03 /* ios-eventsource-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-eventsource-Bridging-Header.h"; sourceTree = "<group>"; };
+		691C82EA201E57C000503C03 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		691C82EC201E589C00503C03 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		691C82EE201F3E6A00503C03 /* EventSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSource.swift; sourceTree = "<group>"; };
+		691C82F5201F426D00503C03 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		691C82F6201F426D00503C03 /* UtilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityManager.swift; sourceTree = "<group>"; };
 		69E1F2D9201E524300A4C6EA /* ios-eventsource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-eventsource.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E1F2DC201E524300A4C6EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69E1F2E1201E524300A4C6EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,7 +119,6 @@
 		69E1F32B201E53D700A4C6EA /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		69E1F32C201E53D700A4C6EA /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		69E1F32D201E53D700A4C6EA /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
-		AC9B3EBEAA4A700A70025239 /* Pods_ios_eventsource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_eventsource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F8949D5E923663F35BFB058 /* Pods_ios_eventsource.framework in Frameworks */,
+				3B27290DC465EE2AD3FE9E40 /* libPods-ios-eventsource.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +150,7 @@
 		44B329C303FF457329DB4EB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AC9B3EBEAA4A700A70025239 /* Pods_ios_eventsource.framework */,
+				257C65E3148EDC25892AB5CD /* libPods-ios-eventsource.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,6 +189,7 @@
 				69E1F2E3201E524300A4C6EA /* Assets.xcassets */,
 				69E1F2E5201E524300A4C6EA /* LaunchScreen.storyboard */,
 				69E1F2E8201E524300A4C6EA /* Info.plist */,
+				691C82E9201E577000503C03 /* ios-eventsource-Bridging-Header.h */,
 			);
 			path = "ios-eventsource";
 			sourceTree = "<group>";
@@ -204,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				69E1F30E201E536600A4C6EA /* AuthViewController.swift */,
+				691C82EA201E57C000503C03 /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -225,7 +238,11 @@
 		69E1F30D201E533600A4C6EA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				691C82F5201F426D00503C03 /* Constants.swift */,
+				691C82F6201F426D00503C03 /* UtilityManager.swift */,
+				691C82EE201F3E6A00503C03 /* EventSource.swift */,
 				69E1F310201E53D700A4C6EA /* Spring */,
+				691C82EC201E589C00503C03 /* Router.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -433,9 +450,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ios-eventsource/Pods-ios-eventsource-resources.sh",
+				"${PODS_ROOT}/QMChatViewController/QMChatViewController/Icons/Media.xcassets",
+				$PODS_CONFIGURATION_BUILD_DIR/QMChatViewController/QMChatViewController.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -449,19 +470,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ios-eventsource/Pods-ios-eventsource-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FFCircularProgressView/FFCircularProgressView.framework",
-				"${BUILT_PRODUCTS_DIR}/QMChatViewController/QMChatViewController.framework",
 				"${PODS_ROOT}/QuickBlox/Quickblox.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFCircularProgressView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QMChatViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quickblox.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -480,6 +493,7 @@
 				69E1F341201E53D700A4C6EA /* AsyncButton.swift in Sources */,
 				69E1F339201E53D700A4C6EA /* SpringButton.swift in Sources */,
 				69E1F33B201E53D700A4C6EA /* Misc.swift in Sources */,
+				691C82ED201E589C00503C03 /* Router.swift in Sources */,
 				69E1F348201E53D700A4C6EA /* LoadingView.swift in Sources */,
 				69E1F335201E53D700A4C6EA /* DesignableLabel.swift in Sources */,
 				69E1F332201E53D700A4C6EA /* ImageLoader.swift in Sources */,
@@ -494,16 +508,20 @@
 				69E1F330201E53D700A4C6EA /* TransitionManager.swift in Sources */,
 				69E1F32F201E53D700A4C6EA /* KeyboardLayoutConstraint.swift in Sources */,
 				69E1F346201E53D700A4C6EA /* SpringAnimation.swift in Sources */,
+				691C82F8201F426D00503C03 /* UtilityManager.swift in Sources */,
 				69E1F334201E53D700A4C6EA /* SpringImageView.swift in Sources */,
 				69E1F340201E53D700A4C6EA /* DesignableTabBarController.swift in Sources */,
 				69E1F331201E53D700A4C6EA /* TransitionZoom.swift in Sources */,
+				691C82F7201F426D00503C03 /* Constants.swift in Sources */,
 				69E1F33E201E53D700A4C6EA /* SpringTextField.swift in Sources */,
 				69E1F345201E53D700A4C6EA /* AutoTextView.swift in Sources */,
 				69E1F32E201E53D700A4C6EA /* DesignableImageView.swift in Sources */,
 				69E1F33A201E53D700A4C6EA /* SpringTextView.swift in Sources */,
 				69E1F2DD201E524300A4C6EA /* AppDelegate.swift in Sources */,
 				69E1F338201E53D700A4C6EA /* DesignableTextField.swift in Sources */,
+				691C82EB201E57C000503C03 /* ChatViewController.swift in Sources */,
 				69E1F33D201E53D700A4C6EA /* DesignableButton.swift in Sources */,
+				691C82EF201F3E6A00503C03 /* EventSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +694,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danialzahid.ios-eventsource";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios-eventsource/ios-eventsource-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -692,6 +711,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danialzahid.ios-eventsource";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios-eventsource/ios-eventsource-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

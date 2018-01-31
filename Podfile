@@ -2,7 +2,6 @@
 # platform :ios, '9.0'
 
 target 'ios-eventsource' do
-  use_frameworks!
 
   pod 'QMChatViewController'
 
