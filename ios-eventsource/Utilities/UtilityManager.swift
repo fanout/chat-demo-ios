@@ -28,6 +28,7 @@ class UtilityManager: NSObject {
     static func appDateFromServerDate(serverDate: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = Constant.serverDateFormat
+        dateFormatter.timeZone = NSTimeZone(name: "UTC")! as TimeZone
         return dateFormatter.date(from: serverDate)!
     
     }

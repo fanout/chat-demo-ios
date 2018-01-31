@@ -13,6 +13,8 @@
 		691C82EF201F3E6A00503C03 /* EventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C82EE201F3E6A00503C03 /* EventSource.swift */; };
 		691C82F7201F426D00503C03 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C82F5201F426D00503C03 /* Constants.swift */; };
 		691C82F8201F426D00503C03 /* UtilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C82F6201F426D00503C03 /* UtilityManager.swift */; };
+		691C83382021ED9A00503C03 /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C83372021ED9A00503C03 /* WebClient.swift */; };
+		691C833A2022422700503C03 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691C83392022422700503C03 /* Styles.swift */; };
 		69E1F2DD201E524300A4C6EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1F2DC201E524300A4C6EA /* AppDelegate.swift */; };
 		69E1F2E2201E524300A4C6EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E1F2E0201E524300A4C6EA /* Main.storyboard */; };
 		69E1F2E4201E524300A4C6EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E1F2E3201E524300A4C6EA /* Assets.xcassets */; };
@@ -77,7 +79,9 @@
 		691C82EE201F3E6A00503C03 /* EventSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSource.swift; sourceTree = "<group>"; };
 		691C82F5201F426D00503C03 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		691C82F6201F426D00503C03 /* UtilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityManager.swift; sourceTree = "<group>"; };
-		69E1F2D9201E524300A4C6EA /* ios-eventsource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-eventsource.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		691C83372021ED9A00503C03 /* WebClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
+		691C83392022422700503C03 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		69E1F2D9201E524300A4C6EA /* Fanout Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fanout Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E1F2DC201E524300A4C6EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69E1F2E1201E524300A4C6EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69E1F2E3201E524300A4C6EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,7 +174,7 @@
 		69E1F2DA201E524300A4C6EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				69E1F2D9201E524300A4C6EA /* ios-eventsource.app */,
+				69E1F2D9201E524300A4C6EA /* Fanout Demo.app */,
 				69E1F2ED201E524300A4C6EA /* ios-eventsourceTests.xctest */,
 				69E1F2F8201E524300A4C6EA /* ios-eventsourceUITests.xctest */,
 			);
@@ -238,6 +242,8 @@
 		69E1F30D201E533600A4C6EA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				691C83392022422700503C03 /* Styles.swift */,
+				691C83372021ED9A00503C03 /* WebClient.swift */,
 				691C82F5201F426D00503C03 /* Constants.swift */,
 				691C82F6201F426D00503C03 /* UtilityManager.swift */,
 				691C82EE201F3E6A00503C03 /* EventSource.swift */,
@@ -312,7 +318,7 @@
 			);
 			name = "ios-eventsource";
 			productName = "ios-eventsource";
-			productReference = 69E1F2D9201E524300A4C6EA /* ios-eventsource.app */;
+			productReference = 69E1F2D9201E524300A4C6EA /* Fanout Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		69E1F2EC201E524300A4C6EA /* ios-eventsourceTests */ = {
@@ -506,6 +512,7 @@
 				69E1F33F201E53D700A4C6EA /* DesignableView.swift in Sources */,
 				69E1F337201E53D700A4C6EA /* BlurView.swift in Sources */,
 				69E1F330201E53D700A4C6EA /* TransitionManager.swift in Sources */,
+				691C83382021ED9A00503C03 /* WebClient.swift in Sources */,
 				69E1F32F201E53D700A4C6EA /* KeyboardLayoutConstraint.swift in Sources */,
 				69E1F346201E53D700A4C6EA /* SpringAnimation.swift in Sources */,
 				691C82F8201F426D00503C03 /* UtilityManager.swift in Sources */,
@@ -514,6 +521,7 @@
 				69E1F331201E53D700A4C6EA /* TransitionZoom.swift in Sources */,
 				691C82F7201F426D00503C03 /* Constants.swift in Sources */,
 				69E1F33E201E53D700A4C6EA /* SpringTextField.swift in Sources */,
+				691C833A2022422700503C03 /* Styles.swift in Sources */,
 				69E1F345201E53D700A4C6EA /* AutoTextView.swift in Sources */,
 				69E1F32E201E53D700A4C6EA /* DesignableImageView.swift in Sources */,
 				69E1F33A201E53D700A4C6EA /* SpringTextView.swift in Sources */,
@@ -691,9 +699,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AYEH6C5B8A;
 				INFOPLIST_FILE = "ios-eventsource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danialzahid.ios-eventsource";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fanout Demo";
 				SWIFT_OBJC_BRIDGING_HEADER = "ios-eventsource/ios-eventsource-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -708,9 +717,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AYEH6C5B8A;
 				INFOPLIST_FILE = "ios-eventsource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danialzahid.ios-eventsource";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fanout Demo";
 				SWIFT_OBJC_BRIDGING_HEADER = "ios-eventsource/ios-eventsource-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

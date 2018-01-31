@@ -14,11 +14,20 @@ public class UserDefaultKey: NSObject {
 
 public class Constant: NSObject {
 
-    static let applicationName = "Connectivity"
+    static let applicationName = "Fanout"
     static let serverDateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
     static let appDateFormat = "MM/dd/yyyy hh:mm:ss a"
     static let eventDateFormat = "MM/dd/yyyy hh:mm a"
     static let eventDetailDateFormat = "MMM dd yyyy',' hh:mma"
     static let animationDuration : TimeInterval = 0.5
+    
+    static let serverURL = "http://chat.fanoutapp.com/"
+    static let roomID = "room-default"
+    
+    static let eventsourceURL = "events/?channel=room-default"
+    static func messageURL(roomID: String) -> String {
+        return "rooms/\(roomID)/messages/"
+    }
+    
     
 }

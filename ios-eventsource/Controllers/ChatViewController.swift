@@ -17,34 +17,26 @@ class ChatViewController: QMChatViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Chat"
+        
         senderID = 9999
-        senderDisplayName = "danial"
+
+        inputToolbar.contentView.leftBarButtonItem = nil
 
         view.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
-        
-        eventSource = EventSource(url: "http://chat.fanoutapp.com/events/?channel=room-default")
-        
-        eventSource.onOpen {
-            // When opened
-        }
-        
-        eventSource.onError { (error) in
-            // When errors
-        }
-        
-        eventSource.addEventListener("message") { (id, event, data) in
-            // Here you get an event 'event-name'
-            if let messageData = data {
-                if let dict = self.convertToDictionary(text: messageData) {
-                    let message = QBChatMessage()
-                    message.text = dict["text"] as? String
-                    message.senderID = dict["id"] as! UInt
-                    message.senderResource = dict["from"] as? String
-                    message.dateSent = UtilityManager.appDateFromServerDate(serverDate: dict["date"]! as! String)
-                    self.chatDataSource.add(message)
+        let activityIndicator = UtilityManager.activityIndicatorForView(view: collectionView)
+        activityIndicator.startAnimating()
+        RequestManager.getMessages(successBlock: { (response) in
+            if let messages = response["messages"] as? [[String: AnyObject]] {
+                for message in messages {
+                    self.processMessage(dict: message)
                 }
             }
+            activityIndicator.stopAnimating()
+        }) { (error) in
+            
         }
+        setupEventSource()
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,20 +44,49 @@ class ChatViewController: QMChatViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: UInt, senderDisplayName: String!, date: Date!) {
+    func setupEventSource() {
+        eventSource = EventSource(url: Constant.serverURL + Constant.eventsourceURL)
+        
+        eventSource.onError { (error) in
+            // When errors
+            print(error ?? "")
+        }
+        
+        eventSource.addEventListener("message") { (id, event, data) in
+            // Here you get an event 'event-name'
+            if let messageData = data {
+                if let dict = self.convertToDictionary(text: messageData) {
+                    self.processMessage(dict: dict)
+                }
+            }
+        }
+    }
+    
+    func processMessage(dict: [String: Any]) {
         let message = QBChatMessage()
-        message.text = text
-        message.senderID = senderId
-        message.dateSent = NSDate() as Date
-        
-        
+        message.text = dict["text"] as? String
+        message.senderID = dict["id"] as! UInt
+        message.senderResource = dict["from"] as? String
+        message.dateSent = UtilityManager.appDateFromServerDate(serverDate: dict["date"]! as! String)
         self.chatDataSource.add(message)
-        
-        self.finishSendingMessage(animated: true)
-        
+    }
+    
+    override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: UInt, senderDisplayName: String!, date: Date!) {
+        self.finishSendingMessage()
+        var params = [String: AnyObject]()
+        params["from"] = senderDisplayName as AnyObject
+        params["text"] = text as AnyObject
+        RequestManager.sendMessage(param: params, successBlock: { (response) in
+            
+        }) { (error) in
+            
+        }
     }
     
     override func viewClass(forItem item: QBChatMessage!) -> AnyClass! {
+        if item.senderID == 0 {
+            return QMChatNotificationCell.self
+        }
         return QMChatIncomingCell.self
     }
     

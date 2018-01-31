@@ -16,6 +16,7 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = "Fanout"
     }
 
     override func didReceiveMemoryWarning() {

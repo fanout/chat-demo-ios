@@ -4,5 +4,6 @@
 target 'ios-eventsource' do
 
   pod 'QMChatViewController'
+  pod 'AFNetworking', '~> 3.0'
 
 end
