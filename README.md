@@ -34,14 +34,6 @@ pod install
 
 We would love you for the contribution to **ios-eventstream**, check the ``LICENSE`` file for more info.
 
-## Meta
-
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
-
-Distributed under the XYZ license. See ``LICENSE`` for more information.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
 [swift-image]:https://img.shields.io/badge/swift-4.0-orange.svg
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
